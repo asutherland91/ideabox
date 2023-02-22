@@ -25,5 +25,52 @@ body {
   background-color: #EAEAF4;
   height: 60vh;
   width: 75vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
+.card {
+  background-color: #FFFFFF;
+  width: 16vw;
+  font-size: 18px;
+  border: 2px solid #1f1f3d;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.top-bar {
+  background-color: #1f1f3d;
+}
+
+.bottom-bar {
+  background-color: #5356A4;
+  border: 1px solid #1f1f3d;
+}
+
+h1 {
+  color: #E9e9f3;
+}
+
+h2 {
+  color: #BFBFDD;
+}
+
+h3 {
+  color: #1f1f3d;
+}
+
+h4 {
+  color: #1f1f3d;
+}
+
+.show-star-btn {
+  background-color: #5356A4;
+  color:#E9e9f3
+}
+
+.save-btn {
+  background-color: #1f1f3d;
+  color:#E9e9f3
+}
