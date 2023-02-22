@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>IdeaBox!</title>
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        <section class="side-bar">
-            <h1>IdeaBox</h1>
-            <h2>Filter Starred Ideas</h2>
-            <button class="show-star-btn">Show Starred Ideas</button>
-        </section>
-        <section class="form-section">
-            <div class="forms">
-                <form action="" method="get" class="title">
-                  <h4>Title</h4>
-                    <input type="text" id="title-form">
-                  <h4>Body</h4>
-                    <input type="text" id="title-form"><br>
-                    <button class="save-btn">Save</button><br>
-                    <input type="text" id="search-form" placeholder="Search ideas">
-                    <button class="search-btn"></button>
-                </form>
-            </div>
-        </section>
-        <section>
-            <section class="idea-cards">
-                <div class="top-bar">
-                    <button class="star-btn"></button>
-                    <button class="delete-btn"></button>
-                </div>
-                <div class="body-section">
-                    <h3>Idea title</h3>
-                    <p>Idea body</p>
-                </div>
-                <div class="bottom-bar">
-                    <button class="comment-btn"></button>
-                    <label for="comment-btn">Comment</label>
-                </div>
-            </section>
-        </section>
-
-    </body>
+  <head>
+    <title>IdeaBox!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <section class="side-bar">
+      <h1>IdeaBox</h1>
+      <hr class="solid">
+      <h2>Filter Starred Ideas</h2>
+      <button class="show-star-btn">Show Starred Ideas</button>
+      <hr class="solid">
+    </section>
+    <div class="main-sections">
+     <section class="form-section">
+      <div class="forms">
+        <form action="" method="get" class="title">
+          <h4>Title</h4>
+          <input type="text" id="title-form">
+          <h4>Body</h4>
+          <input type="text" id="body-form"><br>
+          <button class="save-btn">Save</button><br>
+          <input type="text" id="search-form" placeholder="Search ideas">
+          <button class="search-btn">&#128269</button>
+        </form>
+      </div>
+    </section>
+    <section class="idea-cards">
+      <section class="card">
+        <div class="top-bar">
+          <button class="star-btn">&#11088</button>
+          <button class="delete-btn">&#10060</button>
+        </div>
+        <div class="body-section">
+          <h3>Idea title</h3>
+          <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+        </div>
+        <div class="bottom-bar">
+          <button class="comment-btn">&#10133</button>
+          <label for="comment-btn">Comment</label>
+        </div>
+      </section>
+    </section> 
+  </div>
+  </body>
 </html>
