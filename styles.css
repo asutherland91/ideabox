@@ -45,7 +45,8 @@ margin-bottom: 8px;
 .search-text{
   color:#5456A4;
   font-size: 20px;
-  width: 33.5vw;
+  padding-left: 5px;
+  width: 35vw;
 
 }
 
@@ -66,22 +67,25 @@ margin-bottom: 8px;
 
 .card {
   background-color: #FFFFFF;
-  width: 16vw;
-  font-size: 18px;
+  width: 22vw;
+  font-size: 38px;
   border: 2px solid #353662;
-  height: 250px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin-left: 20px;
   margin-top: 20px;
+  
 }
 
 .top-bar {
   background-color: #1f1f3d;
   display: flex;
   justify-content: space-between;
-  width: 16vw;
+  width: 100%;
+  height: 50px;
 }
 
 .bottom-bar {
@@ -91,7 +95,8 @@ margin-bottom: 8px;
   align-items: center;
   color: #E9e9f3;
   font-weight: 600;
-  width:16vw;
+  width: 100%;
+  height: 50px;
   font-size: smaller;
 }
 
@@ -114,11 +119,18 @@ h2 {
 
 h3 {
   color: #1f1f3d;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 40px;
 }
 
 h4 {
   color: #1f1f3d;
   margin-bottom: 8px;
+}
+
+p {
+  margin-left: 40px;
 }
 
 .show-star-btn {
@@ -141,6 +153,7 @@ h4 {
   margin-bottom: 24px;
   font-size: 20px;
   font-weight: 500;
+  width: 100%;
 }
 
 .search-btn {
@@ -151,22 +164,22 @@ h4 {
 
 .star-btn {
   background-color: #1f1f3d ;
-  height: 30px;
-  width: 30px;
+  height: 48px;
+  width: 48px;
   padding: 0px;
 }
 
 .delete-btn {
   background-color: #1f1f3d ;
-  height: 30px;
-  width: 30px;
+  height: 48px;
+  width: 48px;
   padding: 0px;
 }
 
 .comment-btn {
   background-color: #5356A4 ;
-  height: 35px;
-  width: 35px;
+  height: 52px;
+  width: 52px;
   padding: 0px;
 }
 
@@ -177,6 +190,4 @@ hr {
 button {
   border-radius: 3px;
   border: 0px;
-
-
 }
