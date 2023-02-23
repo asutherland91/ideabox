@@ -175,14 +175,7 @@ h4 {
   height: 75%;
 }
 
-.star-btn {
-  background-color: #1f1f3d ;
-  height: 24px;
-  width: 24px;
-  padding: 0px;
-}
-
-.delete-btn {
+.star-btn, .delete-btn {
   background-color: #1f1f3d ;
   height: 24px;
   width: 24px;
