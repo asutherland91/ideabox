@@ -14,11 +14,27 @@ body {
 
 .form-section {
   background-color: #A9AAD2;
-  height: 40vh;
+  height: 38vh;
   width: 75vw;
   margin: 0px;
   display: flex;
   justify-content: center;
+}
+
+.form-block {
+width: 38vw;
+border: 2px solid #5456A4;
+border-radius: 3px;
+margin-bottom: 8px;
+}
+
+.smaller-form {
+  height: 4vh;
+}
+
+.larger-form {
+  height: 8vh;
+  margin: 0px;
 }
 
 .idea-cards {
@@ -35,7 +51,7 @@ body {
   background-color: #FFFFFF;
   width: 16vw;
   font-size: 18px;
-  border: 2px solid #1f1f3d;
+  border: 2px solid #353662;
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -46,15 +62,24 @@ body {
 
 .bottom-bar {
   background-color: #5356A4;
-  border: 1px solid #1f1f3d;
+  border: 1px solid #353662;
 }
 
 h1 {
   color: #E9e9f3;
+  margin-left: 38px;
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 h2 {
   color: #BFBFDD;
+  margin-left: 38px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
 
 h3 {
@@ -63,14 +88,38 @@ h3 {
 
 h4 {
   color: #1f1f3d;
+  margin-bottom: 8px;
 }
 
 .show-star-btn {
   background-color: #5356A4;
-  color:#E9e9f3
+  color:#E9e9f3;
+  width: 20vw;
+  margin-left: 38px;
+  height: 4vh;
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 28px;
 }
 
 .save-btn {
-  background-color: #1f1f3d;
-  color:#E9e9f3
+  background-color: #353662;
+  color:#E9e9f3;
+  height: 4vh;
+  padding: 0px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+hr {
+  border: 1px solid #353567
+}
+
+button {
+  border-radius: 3px;
+  border: 0px;
+
+
 }
