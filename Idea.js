@@ -9,5 +9,4 @@ class Ideas {
 
     }
 }
-
-module.exports = Ideas;
+// module.exports = Ideas;
