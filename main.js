@@ -1,8 +1,6 @@
-// var Ideas = require('../Idea.js');
-
 var ideas = [];
 
-//query selector go here:
+//query selectors:
 var showStarredIdeas = document.querySelector(".show-star-btn");
 var saveButton = document.querySelector(".save-btn");
 var searchButton = document.querySelector(".search-btn");
@@ -19,14 +17,17 @@ var formSearch = document.querySelector("#search-form");
 saveButton.addEventListener("click", saveIdea);
 
 //functions:
-// we need a save function
-    // needs to be able to update the card title and body input field
-    function saveIdea(event){
-        event.preventDefault();
-          var newCard = new Ideas(formTitle.value, formBody.value)
-            ideaTitle.innerText = newCard.title;
-            ideaBody.innerText = newCard.body;
-      
-            ideas.push(newCard);
-      
-      }
+function saveIdea(event) {
+    event.preventDefault();
+    var newCard = new Ideas(formTitle.value, formBody.value);
+    ideaTitle.innerText = newCard.title;
+    ideaBody.innerText = newCard.body;
+    ideas.push(newCard);
+    clearInputFields();
+}
+
+function clearInputFields(){
+    formTitle.value = '';
+    formBody.value = '';
+}
+
