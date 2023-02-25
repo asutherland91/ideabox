@@ -207,3 +207,7 @@ button {
   color: rgb(172, 172, 172);
   cursor: default;
 }
+
+.delete-btn{
+  background-image: url("assets/delete-active.svg");
+}
