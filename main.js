@@ -15,30 +15,50 @@ var formSearch = document.querySelector("#search-form");
 var ideaCards = document.querySelector(".idea-cards");
 //event listeners:
 saveButton.addEventListener("click", saveIdea);
+formTitle.addEventListener("keyup", toggleButton);
+formBody.addEventListener("keyup", toggleButton);
 
 //functions:
+function toggleButton() {
+  if(formTitle.value && formBody.value) {
+    saveButton.removeAttribute("disabled");
+  } else {
+    saveButton.setAttribute("disabled", "");
+  }
+}
 
-
-
-function saveIdea(event) {
-    event.preventDefault();
-    var newCard = new Ideas(formTitle.value, formBody.value);
-    ideaCards.innerHTML += `<section class="card">
-    <div class="top-bar">
-      <button class="star-btn" type="submit"><img src="assets/star-active.svg" alt="star button"></button>
-      <button class="delete-btn" type="submit"><img src="assets/delete-active.svg" alt="delete button"></button>
+function addIdeaCard(idea) {
+  var ideaCard = document.createElement("section");
+  ideaCard.classList.add("card");
+  ideaCard.setAttribute("id", idea.id);
+  ideaCard.innerHTML = 
+    `<div class="top-bar">
+      <button class="star-btn" type="submit">
+        <img src="assets/star-active.svg" alt="star button">
+      </button>
+      <button class="delete-btn" type="submit">
+        <img class="delete" src="assets/delete-active.svg" alt="delete button">
+      </button>
     </div>
     <div class="body-section">
-      <h3 class="idea-title">${formTitle.value}</h3>
-      <p class="idea-body">${formBody.value}</p>
+      <h3 class="idea-title">${idea.title}</h3>
+      <p class="idea-body">${idea.body}</p>
     </div>
     <div class="bottom-bar">
       <button class="comment-btn" type="submit"><img src="assets/comment.svg" alt="comment button"></button>
       <label for="comment-btn">Comment</label>
-    </div>
-  </section>`
-    ideas.push(newCard);
+    </div>`;
+  ideaCards.appendChild(ideaCard);
+}
+
+
+  function saveIdea(event) {
+    event.preventDefault();
+    var idea = new Ideas(formTitle.value, formBody.value);
+    ideas.push(idea);
+    addIdeaCard(idea);
     clearInputFields();
+    toggleButton();
 }
 
 function clearInputFields(){
