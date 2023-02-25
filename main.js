@@ -17,6 +17,7 @@ var ideaCards = document.querySelector(".idea-cards");
 saveButton.addEventListener("click", saveIdea);
 formTitle.addEventListener("keyup", toggleButton);
 formBody.addEventListener("keyup", toggleButton);
+deleteButton.addEventListener("click", deleteIdea)
 
 //functions:
 function toggleButton() {
@@ -51,7 +52,6 @@ function addIdeaCard(idea) {
   ideaCards.appendChild(ideaCard);
 }
 
-
   function saveIdea(event) {
     event.preventDefault();
     var idea = new Ideas(formTitle.value, formBody.value);
@@ -60,6 +60,11 @@ function addIdeaCard(idea) {
     clearInputFields();
     toggleButton();
 }
+  function deleteIdea(event) {
+    if(event.target.classname === "delete-btn") {
+      event.target.parentNode.remove()
+    }
+  }
 
 function clearInputFields(){
     formTitle.value = '';
