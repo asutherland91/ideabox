@@ -138,6 +138,10 @@ h4 {
   margin-top: 16px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .show-star-btn {
   background-color: #5356A4;
   color:#E9e9f3;
@@ -196,4 +200,10 @@ hr {
 button {
   border-radius: 3px;
   border: 0px;
+}
+
+.save-btn:disabled {
+  background-color: #3536627d;
+  color: rgb(172, 172, 172);
+  cursor: default;
 }
