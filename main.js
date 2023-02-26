@@ -82,9 +82,12 @@ function addIdeaCard(idea) {
       var cardToFavorite = event.target.parentNode.parentNode.parentNode;
       var cardId = Number(cardToFavorite.id);
       for (var i = 0; i < ideas.length; i++) {
-        if (cardId === ideas[i].id) {
+        if (cardId === ideas[i].id && ideas[i].star === false) {
           ideas[i].star = true;
           starFavoriteButton.setAttribute("src", "assets/star-active.svg");
+        } else if (cardId === ideas[i].id &&  ideas[i].star === true) {
+          ideas[i].star = false;
+          starFavoriteButton.setAttribute("src", "assets/star.svg");
         }
       }
     }
