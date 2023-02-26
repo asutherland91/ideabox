@@ -62,12 +62,17 @@ function addIdeaCard(idea) {
     addIdeaCard(idea);
     clearInputFields();
     toggleButton();
-    console.log("does save btn work?")
 }
   function deleteIdea(event) {
     if(event.target.className === "delete-btn") {
-      event.target.parentNode.parentNode.remove()
-      console.log("does this delete btn work?")
+      var cardToRemove = event.target.parentNode.parentNode;
+      var cardId = Number(cardToRemove.id);
+      for (var i = 0; i < ideas.length; i++) {
+        if (cardId === ideas[i].id) {
+          ideas.splice(i, 1);
+        }
+      }
+      cardToRemove.remove();
     }
   }
 
