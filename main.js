@@ -1,18 +1,14 @@
 var ideas = [];
 
 //query selectors:
-// var showStarredIdeas = document.querySelector(".show-star-btn");
+var showStarredIdeas = document.querySelector(".show-star-btn");
 var saveButton = document.querySelector(".save-btn");
 var searchButton = document.querySelector(".search-btn");
-// var starButton = document.querySelector(".star-btn");
 var deleteButton = document.querySelector(".idea-cards");
-// var deleteButtonImage = document.querySelector(".delete")
-// var commentButton = document.querySelector(".comment-btn");
 var ideaTitle = document.querySelector(".idea-title");
 var ideaBody = document.querySelector(".idea-body");
 var formTitle = document.querySelector("#title-form");
 var formBody = document.querySelector("#body-form");
-// var formSearch = document.querySelector("#search-form");
 var ideaCards = document.querySelector(".idea-cards");
 
 //event listeners:
@@ -23,6 +19,7 @@ deleteButton.addEventListener("click", function(event){
   deleteIdea(event);
 });
 ideaCards.addEventListener("click", favoriteIdea);
+showStarredIdeas.addEventListener("click", starConstruction)
 
 //functions:
 function toggleButton() {
@@ -96,5 +93,9 @@ function addIdeaCard(idea) {
 function clearInputFields(){
     formTitle.value = '';
     formBody.value = '';
+}
+
+function starConstruction(){
+  alert('This feature is under construction!!')
 }
 
