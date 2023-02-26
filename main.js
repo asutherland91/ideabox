@@ -15,7 +15,6 @@ var formBody = document.querySelector("#body-form");
 // var formSearch = document.querySelector("#search-form");
 var ideaCards = document.querySelector(".idea-cards");
 
-
 //event listeners:
 saveButton.addEventListener("click", saveIdea);
 formTitle.addEventListener("keyup", toggleButton);
@@ -23,6 +22,7 @@ formBody.addEventListener("keyup", toggleButton);
 deleteButton.addEventListener("click", function(event){
   deleteIdea(event);
 });
+ideaCards.addEventListener("click", favoriteIdea);
 
 //functions:
 function toggleButton() {
@@ -40,7 +40,7 @@ function addIdeaCard(idea) {
   ideaCard.innerHTML = 
     `<div class="top-bar">
       <button class="star-btn" type="submit">
-        <img src="assets/star-active.svg" alt="star button">
+        <img class="star-favorite" src="assets/star.svg" alt="star button">
       </button>
       <button class="delete-btn" id="deleteBtn"></button>
     </div>
@@ -73,6 +73,20 @@ function addIdeaCard(idea) {
         }
       }
       cardToRemove.remove();
+    }
+  }
+
+  function favoriteIdea(event) {
+    if(event.target.className === "star-favorite") {
+      var starFavoriteButton = document.querySelector(".star-favorite");
+      var cardToFavorite = event.target.parentNode.parentNode.parentNode;
+      var cardId = Number(cardToFavorite.id);
+      for (var i = 0; i < ideas.length; i++) {
+        if (cardId === ideas[i].id) {
+          ideas[i].star = true;
+          starFavoriteButton.setAttribute("src", "assets/star-active.svg");
+        }
+      }
     }
   }
 
