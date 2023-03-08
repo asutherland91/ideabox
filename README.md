@@ -3,12 +3,22 @@
 This application is an easy way to store your ideas when they come up. You can favorite them by clicking the star button to show what you like the most, and with the ability to give them their own title it makes it easier to find what you are looking for specifically. If you decide later that an idea isn’t very good, or you are unhappy with it you can just delete it by clicking the “X” button.
 
 ## Installation Instructions:
-1. Open the github repository “ideabox”.
-2. Fork the repository.
-3. On the forked repository page click on the green “<>Code” button and copy the SSH key.
-4. In your own terminal go to the directory in which you wish to clone this repository to.
-5. Once there type “git clone” and paste in the SSH key.
-6. Next go to the directory that it is inside of and open the “index.html” in your browser, from there you should be able to use the application as intended.
+### To Clone the Repository:
+1. Open the GitHub repository page.
+1. Fork the repository.
+1. On the forked repository page, click the "<> Code" drop-down menu and toggle "SSH".
+1. Copy the generated link.
+1. Open the terminal and navigate to the directory you want the local version of your repository to be stored in - cloning will create a new directory.
+1. Run the command "git clone SSHKey", where SSHKey is the link copied from the GitHub page.
+
+### To View the Project - Option 1: Via the HTML File
+- Enter the created directory.
+- Run the command "open index.html" in the terminal. The webpage will appear.
+
+### To View the Project - Option 2: Via the GitHub Pages Deployment
+- Visit the [GitHub Pages deployment link.](https://asutherland91.github.io/ideabox/)
+
+
 
 ## Preview of App:
 ![preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjM0MGI5NjIxMzc0M2NjZTkxMTQ0NjkxN2FmNTZjZDhhMGZjZjI0MCZjdD1n/X2Eu8VUrH51Ml5D5Uz/giphy.gif)
